@@ -1,4 +1,4 @@
-name: Shell Commands2
+name: Shell Commands
 
 on: [push]
 
@@ -17,3 +17,10 @@ jobs:
           import platform
           print (platform.processor())
         shell: python
+  rund-windows-command:
+    runs-on: windows-latest
+    steps:
+      - name: Directory PowerShell
+        run: Get-Location
+      - name: Directory Bash
+        run: Bash
